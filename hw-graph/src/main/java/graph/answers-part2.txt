@@ -1,0 +1,57 @@
+## CSE 331 hw-graph Part 2 Questions
+
+NOTE: This file is used as part of hw-graph-part2, and is not due as part of the hw-graph-part1
+submission. You may leave it blank for hw-graph-part1.
+
+## Part 1
+###########################################################################
+
+A few examples of possible Graph representations:
+
+    A: A collection of nodes and a collection of edges.
+    B: An adjacency list, in which each node is associated with a list of its outgoing edges.
+    C: An adjacency matrix, which explicitly represents, for every pair ⟨A,B⟩ of nodes, whether there 
+       is a link from A to B, and how many.
+
+1. In two or three sentences, explain an advantage and a disadvantage of each of the
+representations listed above (for example, in terms of runtime complexity, space
+complexity, or ease of implementation).
+
+The advantages of A is O(1) time complexity to add a new node and a new edge. But it's
+difficult to match the node and the edge, and consume more space.
+The advantages of B is O(1) time complexity to add a new vertex easier and a new edge,
+and it saves spaces. But the way to find the edge is not efficient.
+The advantages of C is O(1) time complexity to add a new edge and remove the edge. And
+it has O(1) time complexity to find the edge between two nodes. But it has O(square of
+number of vertex) time complexity to add a new vertex and remove the vertex. And it has
+more space consume.
+
+2. In two to three sentences, describe the representation you chose and explain why you
+chose it. If you chose to use a different representation than one of the three we described
+above, be sure to list its advantages and disadvantages, too.
+
+I use map to represent the graph with String nodes as key and List of labeled edges as
+value. Because it can match the node and the edge easier and it has less space consume
+for basis methods like addNode and is convenient to implement methods such as childrenOf.
+
+
+## Part 4
+###########################################################################
+
+    (Please keep your answers brief and to-the-point.)
+
+1. Describe any new tests you added and why you added them, or why you feel that your original
+tests alone are sufficient.
+
+I add a test about the inner class that I add a new elements in the fields. So I write a new test
+to test about that. And the rest of tests are sufficient is because the script tests
+test most of methods such as getEdges and ChildrenOf etc. And Junit tests test different situation
+such as add two same nodes which can not be tested by the script test.
+
+2. Did you make any changes to your specifications as you were implementing your Graph? (yes/no)
+If yes, describe your changes and why you made them.
+
+yes. I add new method getEdges and a method of getStart in the inner class. So I write new
+specification about these methods. And I change some throws and requires in addNode, addEdge,
+hasEdge, hasNode, getEdges, and childrenOf.
+

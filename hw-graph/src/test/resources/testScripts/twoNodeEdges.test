@@ -1,0 +1,19 @@
+# Tests graph creation/viewing with a simple graph ('A') with two nodes and two edges.
+
+# Create a graph
+CreateGraph A
+
+# Add a pair of nodes
+AddNode A n1
+AddNode A n2
+
+# Add an edge
+AddEdge A n1 n2 e1
+AddEdge A n1 n1 e2
+
+# Print all nodes in the graph
+ListNodes A
+
+# Print all child nodes of n1, n2 with outgoing edge
+ListChildren A n1
+ListChildren A n2

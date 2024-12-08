@@ -1,0 +1,121 @@
+## CSE 331 hw-poly Questions
+## Part 0
+###########################################################################
+
+1. Multiplication Pseudocode
+r = p * q:
+    {inv: r = p_0 * q + ...+ p_i-1 * q, where p_i is the ith term in p, q_j is the jth term in q}
+    for each term, t_p, in p
+     {inv_in: r = (p_0 * q+...+p_i-2 * q) + p_i-1 * (q_0+...+q_j-1)}
+     for each term, t_q in q
+        times t_pi with t_qj and add to t_r
+        if any terms has the same degrees in r
+            add together
+
+
+2. Division Pseudocode
+q = u/v:
+    set hv = the highest degree in v
+    set r = u by making a term-by-term copy of all terms in u to r
+    set q = 0
+    {inv:q * v + r = u}
+    while the highest degree in r is greater than or equal to hv
+        set coeq = coefficient of the highest degree of r/ coefficient of the highest degree of v
+        set diffdegree = the highest degree of r - hv
+        add terms with the coefficient coeq and degree diffdegree to q
+        r = r subtract each terms in v that multiple by coeq and each terms' degree increased by diffdegree
+
+
+3. Division Example: (x3+x-1) / (x+1) = x2-x+2
+u = (x^3+x-1)
+v = (x+1)
+r = copy of u = (x^3+x-1)
+hv = 1
+q = 0
+[check while highest degree of r=3 >= hv=1] YES
+    iteration1: u = (x^3+x-1); v = (x+1); r = (x^3+x-1); hv = 1; q = 0
+        [set coeq] coeq = 1/1 = 1
+        [set diffdegree] diffdegree = 3-1 = 2
+        [add terms to q] q = coeq*x^diffdegree = 1*x^2 = x^2
+        [r subtract terms in v] r = (x^3+x-1) - (x+1)*x^2 = (x^3+x-1) - (x^3+x2) = -x^2+x-1
+    [check while loop: degree of r=2 >= hv=1] YES
+    iteration2: u = (x^3+x-1); v = (x+1); r = (-x^2+x-1); hv = 1; q = x2
+        [set coeq] coeq = -1/1 = -1
+        [set diffdegree] diffdegree = 2-1 = 1
+        [add terms to q] q = coeq*x^diffdegree + x^2 = x^2 + -1*x^1 = x^2-x
+        [r subtract terms in v] r = (-x^2+x-1) - (x+1)*-x = 2x-1
+   [check while loop: degree of r=1 >= hv=1] YES
+   iteration3: u = (x^3+x-1); v = (x+1); r = (2x-1); hv = 1; q = (x^2-x)
+        [set coeq] coeq = 2/1 = 2
+        [set diffdegree] diffdegree = 1 - 1 = 0
+        [add terms to q] q = coeq*x^diffdegree + (x^2-x) = 2*x^0 +(x^2-x) = x^2-x+2
+        [r subtract terms in v] r = 2x-1 - (x+1)*2 = -3
+   [check while loop: degree of r= 0 < hv=1] END
+   DONE: q = x^2-x+2
+
+
+
+## Part 1
+###########################################################################
+
+1. Weakened Rep Invariant
+THe original constructor with two argument doesn't need to convert to reduced form.
+To satisfy the new invariant, the gcd method need remove, since gcd requires b!=0.
+hashcode() need modify because these method used gcd() in order to change numbers into
+reduced form, such as 1/2 == 2/4.
+checkRep() need change because rep invariant changed, and increase efficiency.
+toString() also use gcd() to make the number in the reduced form.
+The method using gcd() is less efficient since gcd has a loop.
+
+
+2. Alternate add, sub, mul, div
+For these methods, there doesn't have @modifies and @effects clauses.
+So for the new way, we currently change the "this" value in the field.
+And it's may violate the specification of the methods.
+
+
+3. Constructor checkReps
+The variables of RatNum declare as final and private that only can initialize once.
+And all method return a new object instead modifying. So it's sufficient to call
+checkRep only at the end of the constructors.
+
+
+## Part 2
+###########################################################################
+
+1. Calls to checkRep in RatTerm
+I only include one call to checkRep at the end of constructor. The variables are declared
+as private and final that only can initialize once. Other methods like add,div are created
+new RatTerm object.
+
+2. Weakened Rep Invariant
+The constructor reduced half in code, which decreasing the complexity.
+But may causing other method to have more code.
+checkRep() reduced half in code that decrease the complexity.
+toString() need check coefficient and exponent such as coeff=0 and exp = 5,
+and append to 0 if true, so increasing the complexity.
+hashcode() will increase complexity by checking coefficient and exponent.
+If the coefficient is 0, it should return zero.
+
+3. Change Rep Invariant
+The constructor will change that need handle with isNaN and exponent should be 0.
+checkRap also changed based on new invariant that need to handle with isNaN.
+The original one doesn't have any assert with isNaN, and exp can be 0 now.
+
+
+## Part 3
+###########################################################################
+
+1. Calls to checkRep in RatPoly
+I include checkRap at each end of constructors. The variables are declared as private
+and final that only can initialize once. And other methods like add are created new
+RatPoly or copied object.
+
+2. Two list
+Two list can decrease complexity. It's more convenient and easy to implement, but much unstable
+than RatTerm. It's complicated to do for RatPoly.
+By using RatTerm, we need get the index first and then get coefficient or exponent.
+If we have two different list, we only need to get index, but need to combine them later for RatPoly.
+I would say RatTerm is better, since it can have less operation which letting less mistakes.
+
+

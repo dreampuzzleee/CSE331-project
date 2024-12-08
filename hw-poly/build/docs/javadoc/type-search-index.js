@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"poly","l":"CalculatorFrame"},{"p":"poly","l":"PolyGraph"},{"p":"poly","l":"RatNum"},{"p":"poly","l":"RatPoly"},{"p":"poly","l":"RatPolyStack"},{"p":"poly","l":"RatTerm"}]

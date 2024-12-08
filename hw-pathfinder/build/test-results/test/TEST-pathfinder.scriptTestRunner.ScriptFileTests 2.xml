@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pathfinder.scriptTestRunner.ScriptFileTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-02-25T05:51:44" hostname="ddd.local" time="0.271">
+  <properties/>
+  <testcase name="checkOutput[exampleDijkstraTest]" classname="pathfinder.scriptTestRunner.ScriptFileTests" time="0.233"/>
+  <testcase name="checkOutput[testTwoPath]" classname="pathfinder.scriptTestRunner.ScriptFileTests" time="0.004"/>
+  <testcase name="checkOutput[testRound]" classname="pathfinder.scriptTestRunner.ScriptFileTests" time="0.009"/>
+  <testcase name="checkOutput[testFourNodes]" classname="pathfinder.scriptTestRunner.ScriptFileTests" time="0.005"/>
+  <testcase name="checkOutput[testSelfPath]" classname="pathfinder.scriptTestRunner.ScriptFileTests" time="0.007"/>
+  <testcase name="checkOutput[testNoPath]" classname="pathfinder.scriptTestRunner.ScriptFileTests" time="0.003"/>
+  <testcase name="checkOutput[testEmpty]" classname="pathfinder.scriptTestRunner.ScriptFileTests" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

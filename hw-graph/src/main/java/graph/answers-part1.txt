@@ -1,0 +1,116 @@
+## CSE 331 hw-graph Part 1 Questions
+
+## Part 1
+###########################################################################
+
+a. Write an AF and RI for IntQueue1 and IntQueue2.
+
+    ### IntQueue1
+
+    Abstraction Function:
+        The IntQueue represents as list.
+        The Nth element from the left of the queue = entries[N-1]
+        where the 1st element is at the most left
+        Queue<Integer> = entries = [] if no elements in queue
+
+
+    Representation Invariant:
+        entries != null
+
+
+    ### IntQueue2
+
+    Abstraction Function:
+        The IntQueue represents as array.
+        Queue<Integer> = entries = [] if size = 0
+        The entries[front] is the least-recently-added element to the array,
+        and the first element to be removed. The entries[front+size-1] is the
+        newest-added element to the array, and the last element to be removed.
+
+
+    Representation Invariant:
+        entries != 0; size >= 0
+        0 <= front <= entries[size - 1]
+
+
+b. Group the snapshots of IntQueue2's internal state into groups that have the same abstract state.
+a. queue = [1,2]
+b. queue = [2,3,4]
+c. queue = [1,2,3]
+d. queue = [1,2]
+e. queue = [1,2,3,4]
+f. queue = [1,2,3]
+g. queue = [1,2]
+h. queue = [2,3,4]
+
+a, d, and g are at same group
+c and f are at same group
+b and h are at same group
+
+
+c. For each signature below, state and justify in 1-2 sentences (per part) whether the method or constructor
+could possibly expose the representation, given the information available. Explain any assumptions you made.
+
+    1. `public int solveEquations(int x, int y, int z)`
+        This method will not have rep exposure problem. Because this method take and
+        return parameters to return a new int. It will not modify any field, and is
+        not a producer.
+
+    2. `public String[] decode(boolean slowly)`
+        If String[] is in the field, the array is mutable. And it will
+        have potential rep exposure problem, since it will change the field
+        rather than return a new String[].
+
+        If String[] is not in field, the method would return a new String array based
+        on the given boolean，which will not cause rep exposure.
+
+    3. `private Date myBirthday()`
+        Because this method is private, so the client can't access the field and change
+        the data, so it will not have rep exposure problem.
+
+    4. `public String toString()`
+        It will not have rep exposure problem. Since it's not producers or mutators.
+        And type string is immutable.
+
+    5. `public Iterator<Integer> elements()`
+        It will have rep exposure problem. The iterator reference supports the remove
+        method, so the client can remove the integer in the collection when iterator
+        passes.
+
+    6. `public Deck(List<Card> cards)`
+        It will have potential rep exposure problem. Because the constructor is public
+        rather than private. So the client can change the cards after the constructor
+        created.
+
+
+
+## Part 2
+###########################################################################
+
+Briefly explain why you included the operations you did and why you feel they are a sufficient
+interface to a graph. If your design includes multiple classes or interfaces, explain why you
+included each one; if not, explain whether you considered additional classes and why you decided
+not to include them.
+
+addNode and addEdge are used to build graph by adding node and edge, hasNode and hasEdge are used to
+check whether the graph have the node and the edge between two nodes. isEmpty, countNode, countEdge,
+listNode and childrenOf allow the client to get information of the graph. countNode, and countEdge
+are used to get total number of edges and nodes in the graph. isEmpty is to check whether the graph
+is empty. childrenOf allow client to get correspondent children nodes of this node and correspondent
+edges between this node and the destination node. listNode is used to get all list of nodes.
+I also create a inner class for the edge. This inner class can let the edge with its label and its
+destination. And we can get label and destination node of this edge.
+
+## Part 3
+###########################################################################
+
+What was your testing strategy for this assignment? How do your script tests and JUnit tests
+differ from each other (if they do), and why?
+
+I make empty graph, one node, two nodes in one graphs and two graphs to test behavior in the
+script test. Test many different situation for different nodes, different edges, and different
+graphs. But there are still some specific situation and method that the script test  can't test,
+such as countNode, hasNode, throws exception for null situation, duplicate edges and nodes,
+can't list non-existing nodes, and the method in the inner class. For those, we use JUnit test
+to test.
+

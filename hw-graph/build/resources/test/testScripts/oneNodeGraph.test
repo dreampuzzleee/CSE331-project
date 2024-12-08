@@ -1,0 +1,13 @@
+# Tests graph creation/viewing with a simple graph ('A') with one node.
+
+# Create a graph
+CreateGraph A
+
+# Add a node
+AddNode A n1
+
+# Print all nodes in the graph
+ListNodes A
+
+# Print all child nodes of n1 with outgoing edge
+ListChildren A n1

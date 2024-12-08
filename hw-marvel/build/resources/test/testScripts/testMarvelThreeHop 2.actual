@@ -1,0 +1,3 @@
+# To run this test, the marvel dataset must exist at
+#   hw-marvel/src/main/resources/data/marvel.csv
+

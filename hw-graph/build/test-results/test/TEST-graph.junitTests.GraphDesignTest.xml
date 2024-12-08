@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="graph.junitTests.GraphDesignTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2022-02-23T21:51:55" hostname="ddd.local" time="0.022">
+  <properties/>
+  <testcase name="testHasNoBeforeAddNode" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testNullChildren" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testGetLabel" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testGetStart" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testAddNode" classname="graph.junitTests.GraphDesignTest" time="0.002"/>
+  <testcase name="testNullGetEdges" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testEmpty" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testNullNode" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testAddTwoNullEdge" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testAddEdgeOneNode" classname="graph.junitTests.GraphDesignTest" time="0.0"/>
+  <testcase name="testAddNodeNull" classname="graph.junitTests.GraphDesignTest" time="0.0"/>
+  <testcase name="testConstructNullLabel" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testConstructNullNode2" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testChildrenOfWithoutAdd" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testAddSameEdge" classname="graph.junitTests.GraphDesignTest" time="0.0"/>
+  <testcase name="testAddSameNode" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testAddNullEdge" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testNumberOneEdge" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testNumberOneNode" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testGetDestination" classname="graph.junitTests.GraphDesignTest" time="0.001"/>
+  <testcase name="testConstructNullNode" classname="graph.junitTests.GraphDesignTest" time="0.0"/>
+  <testcase name="testAddOneNullEdge" classname="graph.junitTests.GraphDesignTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

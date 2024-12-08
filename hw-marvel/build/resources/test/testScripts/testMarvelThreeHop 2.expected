@@ -1,0 +1,9 @@
+# To run this test, the marvel dataset must exist at
+#   hw-marvel/src/main/resources/data/marvel.csv
+
+loaded graph marvel
+
+path from KUROYAMA to PROF.-CHIANG:
+KUROYAMA to ELEKTRA/ELEKTRA-NATC via ELEK-14
+ELEKTRA/ELEKTRA-NATC to SHANG-CHI via ELEK-16
+SHANG-CHI to PROF.-CHIANG via JIM-516

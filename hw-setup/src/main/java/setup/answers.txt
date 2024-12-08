@@ -1,0 +1,25 @@
+## CSE 331 hw-setup Questions
+## Part 6
+
+1. Why did Fibonacci fail the testThrowsIllegalArgumentException< test? What (if anything) did
+you have to do to fix it? If you did not have to change anything to fix this issue, explain why.
+
+Because n is the index of the desired term, and it starts at 0. So if if statement is less than or
+equal to 0, the test will always throw exception. Also, the comment says that throws when it's not
+nonnegative number, that 0 doesn't include in it, since 0 is nonnegative.
+So I delete "equal" from the if statement, change to (n < 0) and it works.
+
+2. Why did Fibonacci fail the testBaseCase test? What (if anything) did you have to do to fix
+it? If you did not have to change anything to fix this issue, explain why.
+
+The test fail is because the if statement also includes 2.
+Based on the code in FibonacciTest, I find that the testBaseCase only include n=0,and n=1.
+The expected result for both is 1. So I just need to change the if statement from (n <= 2)
+to (n <= 1).
+
+3.Why did Fibonacci fail the testInductiveCase test? What (if anything) did you have to do to
+fix it? If you did not have to change anything to fix this issue, explain why.
+
+The test fail is because the wrong sign. The nth term of Fibonacci sequence is the sum of
+previous two terms which is xn= xn-1+xn-2. So I change the sign between getFibTerm(n - 1)
+and getFibTerm(n - 2) from "-" to "+".

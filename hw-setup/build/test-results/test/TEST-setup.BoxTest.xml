@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="setup.BoxTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-01-21T05:29:03" hostname="ddd.local" time="0.016">
+  <properties/>
+  <testcase name="testGetBalls" classname="setup.BoxTest" time="0.002"/>
+  <testcase name="testAdd" classname="setup.BoxTest" time="0.001"/>
+  <testcase name="testClear" classname="setup.BoxTest" time="0.0"/>
+  <testcase name="testSize" classname="setup.BoxTest" time="0.007"/>
+  <testcase name="testContains" classname="setup.BoxTest" time="0.0"/>
+  <testcase name="testRemove" classname="setup.BoxTest" time="0.0"/>
+  <testcase name="testVolume" classname="setup.BoxTest" time="0.0"/>
+  <testcase name="testIterator" classname="setup.BoxTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

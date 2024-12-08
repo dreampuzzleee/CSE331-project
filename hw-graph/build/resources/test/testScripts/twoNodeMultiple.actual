@@ -1,0 +1,21 @@
+# Tests graph creation/viewing with a simple graph ('A') with two nodes and multiple edges.
+
+# Create a graph
+created graph A
+
+# Add a pair of nodes
+added node n1 to A
+added node n2 to A
+
+# Add an edge
+added edge e12a from n1 to n2 in A
+added edge e21a from n2 to n1 in A
+added edge e11 from n1 to n1 in A
+added edge e22 from n2 to n2 in A
+
+# Print all nodes in the graph
+A contains: n1 n2
+
+# Print all child nodes of n1, n2 with outgoing edge
+the children of n1 in A are: n1(e11) n2(e12a)
+the children of n2 in A are: n1(e21a) n2(e22)

@@ -1,0 +1,20 @@
+# Tests graph creation/viewing with two graph ('A' and 'B') with two nodes and one edges.
+
+# Create a graph
+created graph A
+created graph B
+
+# Add a pair of nodes
+added node n1 to A
+added node n2 to A
+
+# Add an edge
+added edge e1 from n1 to n2 in A
+
+# Print all nodes in the graph
+A contains: n1 n2
+B contains:
+
+# Print all child nodes of n1, n2 with outgoing edge
+the children of n1 in A are: n2(e1)
+the children of n2 in A are:

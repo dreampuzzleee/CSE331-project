@@ -1,0 +1,17 @@
+# Tests graph creation/viewing with two graph ('A' and 'B') with two nodes.
+
+# Create a graph
+CreateGraph A
+CreateGraph B
+
+# Add a pair of nodes
+AddNode A n1
+AddNode A n2
+
+# Print all nodes in the graph
+ListNodes A
+ListNodes B
+
+# Print all child nodes of n1, n2 with outgoing edge
+ListChildren A n1
+ListChildren A n2

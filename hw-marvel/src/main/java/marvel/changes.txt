@@ -1,0 +1,7 @@
+Briefly list any changes you made to your graph class during hw-marvel, and why you made those changes.
+
+Change AddNode() and addEdge() from void to boolean. I change the type to boolean is because it can help to
+test true or false. If I use throw, the method will end. So I make throw to require. Changing addEdge()
+to increase efficiency. I also change equals() and hashCode() in LabelEdge class. Because I make mistakes
+before that if two edges are equal, not only the labels are equals, but also the starting node and the
+ending node both are equal. Same for hashCode().

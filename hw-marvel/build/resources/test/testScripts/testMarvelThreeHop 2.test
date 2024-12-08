@@ -1,0 +1,6 @@
+# To run this test, the marvel dataset must exist at
+#   hw-marvel/src/main/resources/data/marvel.csv
+
+LoadGraph marvel marvel.csv
+
+FindPath marvel KUROYAMA PROF.-CHIANG

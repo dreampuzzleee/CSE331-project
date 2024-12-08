@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"graph","l":"GraphDesign"},{"p":"intQueue","l":"IntQueue1"},{"p":"intQueue","l":"IntQueue2"},{"p":"graph","l":"GraphDesign.LabelEdge"}]

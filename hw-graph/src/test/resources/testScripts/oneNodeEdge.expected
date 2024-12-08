@@ -1,0 +1,16 @@
+# Tests graph creation/viewing with a simple graph ('A') with one node and one edge.
+
+# Create a graph
+created graph A
+
+# Add a node
+added node n1 to A
+
+# Add an edge
+added edge e1 from n1 to n1 in A
+
+# Print all nodes in the graph
+A contains: n1
+
+# Print all child nodes of n1 with outgoing edge
+the children of n1 in A are: n1(e1)

@@ -1,0 +1,7 @@
+# Find a path with Dijkstra's algorithm when
+# the path found by BFS is different.
+
+created graph simpleGraph
+
+unknown: A
+unknown: B

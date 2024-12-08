@@ -1,0 +1,4 @@
+Briefly list any changes you made to your graph class during hw-pathfinder, and why you made those changes.
+
+Change types in graph and inner class to generics and change the corresponding specifications
+to fit the method. Also I delete a useless method in GraphDesign.

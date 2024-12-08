@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pathfinder.junitTests.datastructures.TestSegment" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-02-25T22:26:25" hostname="ddd.local" time="0.001">
+  <properties/>
+  <testcase name="testMakeSegment" classname="pathfinder.junitTests.datastructures.TestSegment" time="0.0"/>
+  <testcase name="testHashcodeConsistent" classname="pathfinder.junitTests.datastructures.TestSegment" time="0.0"/>
+  <testcase name="testEquals" classname="pathfinder.junitTests.datastructures.TestSegment" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
